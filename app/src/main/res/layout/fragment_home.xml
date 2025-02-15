@@ -1,0 +1,689 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:id="@+id/main">
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="8dp"
+            android:columnCount="1"
+            android:rowCount="3">
+
+            <!--Upper Noti Bar-->
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="0.25"
+                android:layout_columnWeight="1"
+                android:layout_margin="5dp"
+                app:cardBackgroundColor="@color/beige"
+                app:cardCornerRadius="15dp">
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:columnCount="3"
+                    android:rowCount="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="Today: "
+                        android:textColor="@color/black"
+                        android:textSize="26dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/date_TV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="00.00"
+                        android:textColor="@color/black"
+                        android:textSize="26dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginRight="10dp"
+                        android:text="Gym Tacker"
+                        android:textColor="@color/black"
+                        android:textSize="26dp"
+                        android:textStyle="bold" />
+                </GridLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1.12"
+                android:layout_columnWeight="1"
+                android:layout_margin="5dp"
+                app:cardBackgroundColor="@color/beige"
+                app:cardCornerRadius="15dp">
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:columnCount="1"
+                    android:rowCount="3">
+
+                    <TextView
+                        android:id="@+id/calendar_month_TV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_margin="10dp"
+                        android:text="%month%"
+                        android:textColor="@color/black"
+                        android:textSize="24dp"
+                        android:textStyle="bold"/>
+
+                    <GridLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:columnCount="7"
+                        android:rowCount="1"
+                        android:layout_gravity="center">
+
+                        <GridLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:columnCount="1"
+                            android:rowCount="3"
+                            android:layout_marginRight="20dp"
+                            android:layout_gravity="center_horizontal"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="M"
+                                android:textColor="@color/black"
+                                android:textSize="20dp"
+                                android:textStyle="bold"
+                                android:gravity="center"
+                                android:layout_gravity="center"/>
+
+                            <TextView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:gravity="center"
+                                android:layout_marginTop="5dp"
+                                android:background="@drawable/rounded_corner_view"
+                                android:backgroundTint="@color/black"/>
+
+                            <TextView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:gravity="center"
+                                android:layout_marginTop="8dp"
+                                android:background="@drawable/rounded_corner_view"
+                                android:backgroundTint="@color/black"/>
+                        </GridLayout>
+
+                        <GridLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:columnCount="1"
+                            android:rowCount="2"
+                            android:layout_marginRight="20dp"
+                            android:layout_gravity="center_horizontal"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="T"
+                                android:textColor="@color/black"
+                                android:textSize="20dp"
+                                android:textStyle="bold"
+                                android:gravity="center"
+                                android:layout_gravity="center"/>
+
+                            <TextView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:gravity="center"
+                                android:layout_marginTop="5dp"
+                                android:background="@drawable/rounded_corner_view"
+                                android:backgroundTint="@color/black"/>
+
+                            <TextView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:gravity="center"
+                                android:layout_marginTop="8dp"
+                                android:background="@drawable/rounded_corner_view"
+                                android:backgroundTint="@color/black"/>
+                        </GridLayout>
+
+                        <GridLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:columnCount="1"
+                            android:rowCount="2"
+                            android:layout_marginRight="20dp"
+                            android:layout_gravity="center_horizontal"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="W"
+                                android:textColor="@color/black"
+                                android:textSize="20dp"
+                                android:textStyle="bold"
+                                android:gravity="center"
+                                android:layout_gravity="center"/>
+
+                            <TextView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:gravity="center"
+                                android:layout_marginTop="5dp"
+                                android:background="@drawable/rounded_corner_view"
+                                android:backgroundTint="@color/black"/>
+
+                            <TextView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:gravity="center"
+                                android:layout_marginTop="8dp"
+                                android:background="@drawable/rounded_corner_view"
+                                android:backgroundTint="@color/black"/>
+                        </GridLayout>
+
+                        <GridLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:columnCount="1"
+                            android:rowCount="2"
+                            android:layout_marginRight="20dp"
+                            android:layout_gravity="center_horizontal"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="T"
+                                android:textColor="@color/black"
+                                android:textSize="20dp"
+                                android:textStyle="bold"
+                                android:gravity="center"
+                                android:layout_gravity="center"/>
+
+                            <TextView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:gravity="center"
+                                android:layout_marginTop="5dp"
+                                android:background="@drawable/rounded_corner_view"
+                                android:backgroundTint="@color/black"/>
+
+                            <TextView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:gravity="center"
+                                android:layout_marginTop="8dp"
+                                android:background="@drawable/rounded_corner_view"
+                                android:backgroundTint="@color/black"/>
+                        </GridLayout>
+
+                        <GridLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:columnCount="1"
+                            android:rowCount="2"
+                            android:layout_marginRight="20dp"
+                            android:layout_gravity="center_horizontal"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="F"
+                                android:textColor="@color/black"
+                                android:textSize="20dp"
+                                android:textStyle="bold"
+                                android:gravity="center"
+                                android:layout_gravity="center"/>
+
+                            <TextView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:gravity="center"
+                                android:layout_marginTop="5dp"
+                                android:background="@drawable/rounded_corner_view"
+                                android:backgroundTint="@color/black"/>
+
+                            <TextView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:gravity="center"
+                                android:layout_marginTop="8dp"
+                                android:background="@drawable/rounded_corner_view"
+                                android:backgroundTint="@color/black"/>
+                        </GridLayout>
+
+                        <GridLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:columnCount="1"
+                            android:rowCount="2"
+                            android:layout_marginRight="20dp"
+                            android:layout_gravity="center_horizontal"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="S"
+                                android:textColor="@color/black"
+                                android:textSize="20dp"
+                                android:textStyle="bold"
+                                android:gravity="center"
+                                android:layout_gravity="center"/>
+
+                            <TextView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:gravity="center"
+                                android:layout_marginTop="5dp"
+                                android:background="@drawable/rounded_corner_view"
+                                android:backgroundTint="@color/black"/>
+
+                            <TextView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:gravity="center"
+                                android:layout_marginTop="8dp"
+                                android:background="@drawable/rounded_corner_view"
+                                android:backgroundTint="@color/black"/>
+                        </GridLayout>
+
+                        <GridLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:columnCount="1"
+                            android:rowCount="2"
+
+                            android:layout_gravity="center_horizontal"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="S"
+                                android:textColor="@color/burgundy"
+                                android:textSize="20dp"
+                                android:textStyle="bold"
+                                android:gravity="center"
+                                android:layout_gravity="center"/>
+
+                            <TextView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:gravity="center"
+                                android:layout_marginTop="5dp"
+                                android:background="@drawable/rounded_corner_view"
+                                android:backgroundTint="@color/black"/>
+
+                            <TextView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:gravity="center"
+                                android:layout_marginTop="8dp"
+                                android:background="@drawable/rounded_corner_view"
+                                android:backgroundTint="@color/black"/>
+                        </GridLayout>
+                    </GridLayout>
+
+                    <GridLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:columnCount="3"
+                        android:rowCount="1"
+                        android:layout_marginTop="20dp"
+                        android:layout_gravity="center">
+
+                        <GridLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:columnCount="2"
+                            android:rowCount="1">
+
+                            <TextView
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
+                                android:layout_marginRight="5dp"
+                                android:background="@drawable/rounded_corner_view"
+                                android:backgroundTint="@color/light_green"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Push day"
+                                android:textColor="@color/black"
+                                android:textSize="18dp"
+                                android:textStyle="bold"/>
+                        </GridLayout>
+
+                        <GridLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:columnCount="2"
+                            android:rowCount="1"
+                            android:layout_marginLeft="10dp">
+
+                            <TextView
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
+                                android:layout_marginRight="5dp"
+                                android:background="@drawable/rounded_corner_view"
+                                android:backgroundTint="@color/grey"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Pull day"
+                                android:textColor="@color/black"
+                                android:textSize="18dp"
+                                android:textStyle="bold"/>
+                        </GridLayout>
+
+                        <GridLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:columnCount="2"
+                            android:rowCount="1"
+                            android:layout_marginLeft="10dp">
+
+                            <TextView
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
+                                android:layout_marginRight="5dp"
+                                android:background="@drawable/rounded_corner_view"
+                                android:backgroundTint="@color/burgundy"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Leg day"
+                                android:textColor="@color/black"
+                                android:textSize="18dp"
+                                android:textStyle="bold"/>
+                        </GridLayout>
+                    </GridLayout>
+
+                    <GridLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:columnCount="2"
+                        android:rowCount="1"
+                        android:layout_marginTop="5dp"
+                        android:layout_gravity="center">
+
+                        <GridLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:columnCount="2"
+                            android:rowCount="1">
+
+                            <TextView
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
+                                android:layout_marginRight="5dp"
+                                android:background="@drawable/rounded_corner_view"
+                                android:backgroundTint="@color/light_blue"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Arm day"
+                                android:textColor="@color/black"
+                                android:textSize="18dp"
+                                android:textStyle="bold"/>
+                        </GridLayout>
+
+                        <GridLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:columnCount="2"
+                            android:rowCount="1"
+                            android:layout_marginLeft="10dp">
+
+                            <TextView
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
+                                android:layout_marginRight="5dp"
+                                android:background="@drawable/rounded_corner_view"
+                                android:backgroundTint="@color/purple"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Cardio"
+                                android:textColor="@color/black"
+                                android:textSize="18dp"
+                                android:textStyle="bold"/>
+                        </GridLayout>
+                    </GridLayout>
+<!--
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginLeft="20dp"
+                        android:text="Weekly Report"
+                        android:textColor="@color/black"
+                        android:textSize="20dp"
+                        android:textStyle="bold"/>
+-->
+                    <GridLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:columnCount="1"
+                        android:rowCount="2"
+                        android:layout_marginTop="20dp"
+                        android:layout_gravity="center">
+
+                        <GridLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:columnCount="3"
+                            android:rowCount="1">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Gym this week: "
+                                android:textColor="@color/black"
+                                android:textSize="18dp"
+                                android:textStyle="bold"/>
+
+                            <TextView
+                                android:id="@+id/weekly_train_time_TV"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="%amount%"
+                                android:textColor="@color/black"
+                                android:textSize="18dp"
+                                android:textStyle="bold"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=" times"
+                                android:textColor="@color/black"
+                                android:textSize="18dp"
+                                android:textStyle="bold"/>
+                        </GridLayout>
+
+                        <GridLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:columnCount="3"
+                            android:rowCount="1">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Cardio this week: "
+                                android:textColor="@color/black"
+                                android:textSize="18dp"
+                                android:textStyle="bold"/>
+
+                            <TextView
+                                android:id="@+id/weekly_cardio_time_TV"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="%amount%"
+                                android:textColor="@color/black"
+                                android:textSize="18dp"
+                                android:textStyle="bold"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=" times"
+                                android:textColor="@color/black"
+                                android:textSize="18dp"
+                                android:textStyle="bold"/>
+                        </GridLayout>
+                    </GridLayout>
+                </GridLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/start_workout_CV"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="5dp"
+                app:cardBackgroundColor="@color/beige"
+                app:cardCornerRadius="15dp">
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:columnCount="1"
+                    android:rowCount="5"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="top|center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:text="Last Workout: "
+                        android:textColor="@color/black"
+                        android:textSize="20dp"
+                        android:textStyle="bold"/>
+
+                    <GridLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:columnCount="2"
+                        android:rowCount="1"
+                        android:layout_marginTop="5dp">
+
+                        <ImageView
+                            android:id="@+id/workout_type_IV"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="30dp"
+                            app:srcCompat="@drawable/cardio_asset"/>
+
+                        <TextView
+                            android:id="@+id/workout_type_TV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="%workout_type%"
+                            android:textColor="@color/black"
+                            android:textSize="18dp"
+                            android:textStyle="bold"
+                            android:layout_gravity="center"/>
+                    </GridLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="15dp"
+                        android:text="Recommended Workout: "
+                        android:textColor="@color/black"
+                        android:textSize="20dp"
+                        android:textStyle="bold"/>
+
+                    <GridLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:columnCount="2"
+                        android:rowCount="1"
+                        android:layout_marginTop="5dp">
+
+                        <ImageView
+                            android:id="@+id/recommended_workout_type_IV"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="30dp"
+                            app:srcCompat="@drawable/cardio_asset"/>
+
+                        <TextView
+                            android:id="@+id/recommended_workout_type_TV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="%workout_type%"
+                            android:textColor="@color/black"
+                            android:textSize="18dp"
+                            android:textStyle="bold"
+                            android:layout_gravity="center"/>
+                    </GridLayout>
+
+                    <Button
+                        android:id="@+id/start_workout_BTN"
+                        android:onClick="start_workout_onClick"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:backgroundTint="@color/green"
+                        android:text="Start Workout"
+                        android:textColor="@color/black"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+                </GridLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+        </GridLayout>
+    </FrameLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

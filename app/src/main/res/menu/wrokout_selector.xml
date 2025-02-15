@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/push_workout"
+        android:icon="@drawable/push_workout_asset"
+        android:title="Push Workout"/>
+    <item
+        android:id="@+id/pull_workout"
+        android:icon="@drawable/pull_workout_asset"
+        android:title="Pull Workout"/>
+    <item
+        android:id="@+id/leg_workout"
+        android:icon="@drawable/leg_workout_asset"
+        android:title="Leg Workout"/>
+    <item
+        android:id="@+id/arm_workout"
+        android:icon="@drawable/arm_workout_asset"
+        android:title="Arm Workout"/>
+    <item
+        android:id="@+id/cardio"
+        android:icon="@drawable/cardio_asset"
+        android:title="Cardio"/>
+</menu>

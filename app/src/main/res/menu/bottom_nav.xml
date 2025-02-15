@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/home_nav_item"
+        android:icon="@drawable/home_asset_navbar"
+        android:title="Home"/>
+    <item
+        android:id="@+id/activity_nav_item"
+        android:icon="@drawable/activity_asset_navbar"
+        android:title="Activity"/>
+    <item
+        android:id="@+id/calendar_nav_item"
+        android:icon="@drawable/calendar_asset_navbar"
+        android:title="Calendar"/>
+</menu>
